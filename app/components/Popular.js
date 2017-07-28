@@ -1,23 +1,19 @@
 import React from 'react';
 
-class SelectLanguage extends React.Component {
-  render(){
-    let languages = ["All", "Javascript", "Ruby", "Java", "CSS", "Python"]
-
-    return(
-      <ul className="languages">
-        {languages.map((lang) => {
-          return(
-            <li style={lang === this.props.selectedLanguage ? {color: '#d0021b'} : null } key={lang} onClick={this.props.onSelect.bind(null, lang)}>
-              {lang}
-            </li>
-          )
-        })}
-      </ul>
-    )
-  }
+function SelectLanguage (props) {
+  let languages = ["All", "Javascript", "Ruby", "Java", "CSS", "Python"]
+  return (
+    <ul className="languages">
+      {languages.map((lang) => {
+        return(
+          <li style={lang === props.selectedLanguage ? {color: '#d0021b'} : null } key={lang} onClick={props.onSelect.bind(null, lang)}>
+            {lang}
+          </li>
+        )
+      })}
+    </ul>
+  )
 }
-
 
 
 class Popular extends React.Component {
