@@ -2,6 +2,7 @@ import React from 'react';
 import api from '../utility/api';
 
 function SelectLanguage (props) {
+  console.log(props);
   let languages = ["All", "Javascript", "Ruby", "Java", "CSS", "Python"]
   return (
     <ul className="languages">
